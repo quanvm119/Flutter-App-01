@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
 
-void main() => runApp(MyApp()); // Thay vì runApp(const HomepageApp());
+void main() =>
+    runApp(MyApp()); // Thay vì runApp(const HomepageApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/login', // Trang đăng nhập là trang mặc định
+      initialRoute: '/login', 
       routes: {
-        '/login': (context) => const Login(title: 'Login'), // Trang đăng nhập
-        '/home': (context) => const Homepage(), // Trang chính
+        '/login': (context) => const Login(title: 'Login'), 
+        '/home': (context) => const Homepage(), 
       },
     );
   }
@@ -25,7 +26,8 @@ class HomepageApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const Homepage(),
-        '/login': (context) => const Login(title: 'Login'),
+        '/login': (context) =>
+            Login(title: 'Login'), 
       },
     );
   }
@@ -35,10 +37,12 @@ class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<Homepage> createState() =>
+      _HomepageState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _HomepageState
+    extends State<Homepage> {
   int _selectedIndex = 0;
 
   static const TextStyle optionStyle =
@@ -53,12 +57,12 @@ class _HomepageState extends State<Homepage> {
           height: 10,
         ),
         // Header body
-        Row( 
+        Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding( 
+            Padding(
               padding: const EdgeInsets.only(top: 10.0),
-              child:  Row(
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
@@ -68,7 +72,7 @@ class _HomepageState extends State<Homepage> {
                     height: 65,
                   ),
                   SizedBox(width: 5),
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -425,6 +429,9 @@ class _HomepageState extends State<Homepage> {
           )
         ],
       ),
+
+
+
       body: IndexedStack(
         index: _selectedIndex,
         children: _widgetOptions,
@@ -467,8 +474,8 @@ class _HomepageState extends State<Homepage> {
             height: 10,
             width: double.infinity,
             child: Container(
-              color: Colors.blue, // Đổi màu nền thành màu đỏ
-              // Bất kỳ nội dung nào bạn muốn hiển thị trong SizedBox
+              color: Colors.blue, 
+           
             ),
           )
         ],

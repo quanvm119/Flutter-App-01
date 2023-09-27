@@ -18,10 +18,6 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Colors.blue,
-      ),
       body: Form(
         key: _formKey,
         child: Padding(
@@ -30,21 +26,39 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 70,
+                height: 50,
+              ),
+                    Align(
+                  alignment: Alignment.topRight, 
+                  child: Container(
+                    margin: const EdgeInsets.all(10.0),
+                    child: Image.asset(
+                      'images/popupvn.png',
+                      fit: BoxFit.contain,
+                      width: 52,
+                      height: 50,
+                    ),
+                  )),
+
+                    SizedBox(
+                height: 50,
               ),
               Text(
-                'ĐĂNG NHẬP', // Thêm văn bản ĐĂNG NHẬP
+                'Đăng nhập', 
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
+      
               SizedBox(
                 height: 30,
               ),
+
+
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 8.0), // Thêm padding chỉ vào phía trái
+                    left: 8.0), 
                 child: Text(
                   'Email',
                   style: TextStyle(
@@ -70,7 +84,7 @@ class _LoginState extends State<Login> {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 8.0), // Thêm padding chỉ vào phía trái
+                    left: 8.0), 
                 child: Text(
                   'Mật khẩu',
                   style: TextStyle(
@@ -96,10 +110,10 @@ class _LoginState extends State<Login> {
                 ),
               ),
               Align(
-                alignment: Alignment.topRight, // Căn chỉnh về phía bên phải
+                alignment: Alignment.topRight, 
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      right: 8.0), // Thêm padding chỉ vào phía phải
+                      right: 8.0),
                   child: Text(
                     'Quên mật khẩu?',
                     style: TextStyle(
@@ -109,7 +123,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
-           const SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Padding(
@@ -145,10 +159,10 @@ class _LoginState extends State<Login> {
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 142,
-                          vertical: 18), // Điều chỉnh kích thước
+                          vertical: 18), 
                       textStyle: TextStyle(
                           fontSize:
-                              15), // Điều chỉnh kích thước văn bản bên trong nút
+                              15), 
                     ),
                   ),
                 ),
